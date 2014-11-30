@@ -2,22 +2,26 @@
 	<head>
 		<title>Froggy</title>
 		<style>
-		img{width:200px; height:150px}
+			img{width:200px; height:150px}
 		</style>
 		<script>
 			function allthefrog()
 			{
-				for(x=0; x < 10; x++)
+				var w = window.innerWidth;
+				var h = window.innerHeight;
+				var nfw = Math.floor(w/200);
+				var nfh = Math.floor(h/150);
+				for(y=0; y < nfh; y++)
 				{
 					var r = document.createElement("tr");
-					r.setAttribute("id","f"+x.toString());
+					r.setAttribute("id","f"+y.toString());
 					document.getElementById("main").appendChild(r);
-					for(y=0; y < 10; y++)
+					for(x=0; x < nfw; x++)
 					{
 						var f = document.createElement("img");
 						f.setAttribute("src","http://fc03.deviantart.net/fs70/f/2014/263/e/b/daily_paint__670___desert_frog_quickie_by_cryptid_creations-d7zy41e.png");
 						f.setAttribute("test","true");
-						document.getElementById("f"+x.toString()).appendChild(f);
+						document.getElementById("f"+y.toString()).appendChild(f);
 					}
 				}
 			}

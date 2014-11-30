@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Froggy</title>
+		<style>
+		img{width:200px; height:150px}
+		</style>
+		<script>
+			function allthefrog()
+			{
+				for(x=0; x < 10; x++)
+				{
+					var r = document.createElement("tr");
+					r.setAttribute("id","f"+x.toString());
+					document.getElementById("main").appendChild(r);
+					for(y=0; y < 10; y++)
+					{
+						var f = document.createElement("img");
+						f.setAttribute("src","http://fc03.deviantart.net/fs70/f/2014/263/e/b/daily_paint__670___desert_frog_quickie_by_cryptid_creations-d7zy41e.png");
+						f.setAttribute("test","true");
+						console.log("f"+x.toString())
+						document.getElementById("f"+x.toString()).appendChild(f);
+						
+					}
+				}
+			}
+			window.onload = allthefrog;
+		</script>
+	</head>
+	<body>
+		<table id="main">
+		</table>
+	</body>
+</html>

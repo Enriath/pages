@@ -1,9 +1,18 @@
 <html>
 <head>
+  <script>
+    var height = window.innerHeight;
+    var mult = 1.2478778;
+    var width = height*mult;
+    var pad = window.innerWidth - width;
+    pad = pad / 2;
+    var i = document.getElementById("im");
+    i.marginLeft = pad;
+    i.width = width;
+    i.height = height;
+  </script>
 </head>
 <body>
-  <div style="margin:auto;width:200%;">
-    <img style="height:100%" src="http://i.imgur.com/aH7tuLh.png"/>
-    </div>
+    <img id="im" src="http://i.imgur.com/aH7tuLh.png"/>
 </body>
 </html>
